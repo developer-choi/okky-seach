@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import LinksPart from './parts/LinksPart';
+import ApiCallPart from './parts/ApiCallPart';
+import SearchFormPart from './parts/SearchFormPart';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Wrap>
+        <ApiCallPart/>
+        <LinksPart/>
+        <SearchFormPart/>
+      </Wrap>
   );
 }
 
-export default App;
+const Wrap = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 100px;
+`;
