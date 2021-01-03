@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.github.config.js"
   },
   "eslintConfig": {
     "extends": [
